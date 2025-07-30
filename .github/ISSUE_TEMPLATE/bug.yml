@@ -1,18 +1,66 @@
-name: 🐞 Bug
-description: Signaler un bug
-labels: [bug]
+name: 🐞 Rapport de bug
+description: Signaler un dysfonctionnement rencontré dans une des applications
+title: "[BUG] "
+issue_type: bug
 body:
+  - type: input
+    id: prenom
+    attributes:
+      label: Prénom
+      placeholder: Saisissez votre prénom
+    validations:
+      required: true
+
   - type: input
     id: nom
     attributes:
-      label: Qui êtes-vous ?
-      placeholder: Prénom
+      label: Nom
+      placeholder: Saisissez votre nom de famille
     validations:
       required: true
-  - type: textarea
-    id: description
+
+  - type: input
+    id: email
     attributes:
-      label: Que s'est-il passé ?
-      placeholder: Décris le bug
+      label: Adresse e-mail
+      placeholder: exemple@domaine.com
+      description: Cette adresse ne sera pas visible publiquement
     validations:
       required: true
+
+  - type: dropdown
+    id: application
+    attributes:
+      label: Application concernée
+      description: Choisissez l'application pour laquelle le bug est signalé
+      options:
+        - Barobaj
+        - ImprimFip
+        - Decisionbaj
+    validations:
+      required: true
+
+  - type: textarea
+    id: probleme
+    attributes:
+      label: Description du problème
+      description: Expliquez précisément le comportement inattendu observé
+      placeholder: Décrivez le dysfonctionnement avec autant de détails que possible
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Étapes pour reproduire le problème
+      description: Fournissez une séquence claire pour permettre de reproduire le bug
+      placeholder: 1. Ouvrir l'application\n2. Cliquer sur...\n3. Résultat inattendu...
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        **Ajout de captures d'écran ou de fichiers**
+        <br>Faites glisser vos images ici ou cliquez pour les joindre à votre signalement.
+
