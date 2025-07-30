@@ -1,7 +1,7 @@
 name: 🐞 Rapport de bug
 description: Signaler un dysfonctionnement rencontré dans une des applications
 title: "[BUG] "
-issue_type: bug
+labels: [bug]
 body:
   - type: input
     id: prenom
