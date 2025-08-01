@@ -1,0 +1,65 @@
+name: ✨ Demande de fonctionnalité
+description: Proposer l'ajout d'une nouvelle fonctionnalité dans une des applications
+title: "[FEATURE] "
+labels: [enhancement]
+body:
+  - type: input
+    id: prenom
+    attributes:
+      label: Prénom
+      placeholder: Saisissez votre prénom
+    validations:
+      required: true
+
+  - type: input
+    id: nom
+    attributes:
+      label: Nom
+      placeholder: Saisissez votre nom de famille
+    validations:
+      required: true
+
+  - type: input
+    id: email
+    attributes:
+      label: Adresse e-mail
+      placeholder: exemple@domaine.com
+      description: Cette adresse ne sera pas visible publiquement
+    validations:
+      required: true
+
+  - type: dropdown
+    id: application
+    attributes:
+      label: Application concernée
+      description: Sélectionnez l'application à laquelle s'applique cette suggestion
+      options:
+        - Barobaj
+        - ImprimFip
+        - Decisionbaj
+    validations:
+      required: true
+
+  - type: textarea
+    id: besoin
+    attributes:
+      label: Description de la fonctionnalité souhaitée
+      description: Décrivez de façon claire et précise la fonctionnalité que vous aimeriez voir ajoutée
+      placeholder: Exposez votre idée en expliquant pourquoi elle serait utile
+    validations:
+      required: true
+
+  - type: textarea
+    id: contexte
+    attributes:
+      label: Contexte d'utilisation
+      description: Donnez un exemple d'utilisation ou un scénario réel où cette fonctionnalité serait bénéfique
+      placeholder: Par exemple : Dans le cadre de...
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        **Ajout de captures d'écran ou documents**
+        <br>Vous pouvez ajouter des fichiers ici pour illustrer votre besoin.

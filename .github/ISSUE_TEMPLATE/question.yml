@@ -1,0 +1,59 @@
+name: ❓ Question ou demande d'aide
+description: Poser une question sur une fonctionnalité, un comportement, ou une utilisation
+title: "[QUESTION] "
+labels: [question]
+body:
+  - type: input
+    id: prenom
+    attributes:
+      label: Prénom
+      placeholder: Saisissez votre prénom
+    validations:
+      required: true
+
+  - type: input
+    id: nom
+    attributes:
+      label: Nom
+      placeholder: Saisissez votre nom de famille
+    validations:
+      required: true
+
+  - type: input
+    id: email
+    attributes:
+      label: Adresse e-mail
+      placeholder: exemple@domaine.com
+      description: Cette adresse ne sera pas visible publiquement
+    validations:
+      required: true
+
+  - type: dropdown
+    id: application
+    attributes:
+      label: Application concernée
+      description: Sélectionnez l'application à propos de laquelle vous avez une question
+      options:
+        - Barobaj
+        - ImprimFip
+        - Decisionbaj
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Formulez votre question
+      description: Décrivez votre interrogation ou votre besoin d'assistance
+      placeholder: Expliquez clairement votre question ou demande de clarification
+    validations:
+      required: true
+
+  - type: textarea
+    id: contexte
+    attributes:
+      label: Contexte (facultatif)
+      description: Fournissez des précisions sur la situation dans laquelle vous vous posez cette question
+      placeholder: Exemple : Lors de l'utilisation du module d'impression...
+    validations:
+      required: false
