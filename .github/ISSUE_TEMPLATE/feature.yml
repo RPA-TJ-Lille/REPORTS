@@ -54,7 +54,7 @@ body:
     attributes:
       label: Contexte d'utilisation
       description: Donnez un exemple d'utilisation ou un scénario réel où cette fonctionnalité serait bénéfique
-      placeholder: Par exemple : Dans le cadre de...
+      placeholder: Dans le cadre de...
     validations:
       required: false
 

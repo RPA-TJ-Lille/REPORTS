@@ -54,6 +54,6 @@ body:
     attributes:
       label: Contexte (facultatif)
       description: Fournissez des précisions sur la situation dans laquelle vous vous posez cette question
-      placeholder: Exemple : Lors de l'utilisation du module d'impression...
+      placeholder: Lors de l'utilisation du module d'impression...
     validations:
       required: false
